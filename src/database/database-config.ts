@@ -13,4 +13,5 @@ export const databaseConfig: TypeOrmModuleOptions = {
   database: process.env.DB_NAME,
   entities: [join(__dirname, "../modules/**/**/*.entity.{ts,js}")],
   synchronize: process.env.TYPEORM_SYNC === "true",
+  ssl: { rejectUnauthorized: false }
 };
